@@ -1,0 +1,46 @@
+Flight stick version release notes
+
+Ver 1.0
+1) Full axis control (A0 - A3)
+2) Full stick buttons supported (D3 - D8)
+3) Head tracker supported (D2)
+4) Aileron & Elevator trims supported via HAT button
+
+Ver 1.2
+5) Automatic trims value save to EEPROM every 10 sec
+6) Saved trims read from EEPROM on startup
+7) Battery sensing and alerting (on A6 when < 10.5V for more then 5 seconds)
+8) 2 Toggle switchs were added on A4 and A5 inputs
+
+Ver 1.3
+1) Change the project version format to ver.rev (1.3)
+2) Change "*2" multipliction to "<<1" for faster calculation
+3) Version and revision beeps
+
+Ver 1.4
+1) Add motor killer using Toggle from A5 
+   IMPORTANT !!!!!! (enable motor back only if throttle is in minimum and toggle is back to normal)
+2) Add trigger killer using Toggle from A4
+3) Reverse Throttle channel ( after this fix -> min = 1000 max = 2000)
+
+Ver 1.6
+1) send real time status to PC application
+
+Ver 1.8
+1) Set Headtracker to center (overide headtracker input) in case safe toggle is in safe position
+
+Ver 2.0
+1) Code cleanUp
+
+##################### Known BUGS: ##############################
+1) Headtracker must be working and connected to the stick before turning the stick ON !!!!!!!
+
+*************************** SAFTY WARNING !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ********************************************
+2) Motor CutOff release safty not working when Headtracker is connected !!!
+(If headtracker is connected - when the motor cutoff is turnning to Off the motor will spin according to the throttle value !!!!!!!!!!!!!!!)
+***************************************************************************************************************
+
+Todo:
+1) Optimize button/input reads using bitmap and not "digitalread"
+3) Add PC application support (set Trims/Limits/Expo/End point)
+
